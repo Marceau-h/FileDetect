@@ -19,7 +19,8 @@ pip install filedetect
 ```
 
 ## Description
-`filedetect` is a Python package that provides a simple and efficient way to detect file formats in a directory tree.
+`filedetect` is a Python package that provides a simple way to detect file formats in a directory tree. 
+This project relies on the `pathlib` library to traverse the directory tree and separate files suffixes from their full name.
 One can specify the suffixes to detect, the maximum depth of detection, and the formats to look for.
 
 For convinence, some common suffixes are already defined for the following formats:

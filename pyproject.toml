@@ -9,7 +9,19 @@ description = "Detects files in a directory and its subdirectories."
 readme = "README.md"
 requires-python = ">=3.9"
 license = "AGPL-3.0-or-later"
-keywords = []
+keywords = [
+    "file",
+    "directory",
+    "subdirectory",
+    "detect",
+    "filedetect",
+    "path",
+    "pathlib",
+    "filesystem",
+    "io",
+    "traversal",
+    "file system",
+]
 authors = [
     { name = "Marceau", email = "pypi@marceau-h.fr" },
 ]
@@ -20,6 +32,8 @@ classifiers = [
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
@@ -41,7 +55,7 @@ extra-dependencies = [
 check = "mypy --install-types --non-interactive {args:src/filedetect tests}"
 
 [tool.coverage.run]
-source_pkgs = ["filedetect", "tests"]
+source_pkgs = ["filedetect"]
 branch = true
 parallel = true
 omit = [
