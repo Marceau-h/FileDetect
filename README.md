@@ -63,7 +63,7 @@ filedetect [-h] [--list_formats] [--version] path [--format {video,image,audio,p
 ```python
 from filedetect import FileDetect
 
-detector = FileDetect.run(
+detector = FileDetect.find(
 path="path/to/dir",
 format=None, # ["video", "audio", "image", "text", "csv"; "json", "html"] | None for all formats
 deep=-1, # positive int for maximum depth of detection or -1 for unlimited
