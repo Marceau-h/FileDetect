@@ -69,7 +69,7 @@ class FileDetect:
             if file.is_dir():
                 if self.deep != 0:
                     yield from self(file)
-            elif not self.suffixes or file.suffix in self.suffixes:
+            elif self.suffixes is None or file.suffix.lower() in self.suffixes:
                 if self.only_stems is not None:
                     if file.stem in self.only_stems or any(file.stem.startswith(stem) for stem in self.only_stems):
                         yield file
