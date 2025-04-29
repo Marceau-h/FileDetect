@@ -70,7 +70,7 @@ deep=-1, # positive int for maximum depth of detection or -1 for unlimited
 only_stems=None, # None | a set of stems to detect,
 suffixes=None, # None | a set of suffixes to detect (in place of format),
 )
-print(detector.results)
+print(detector.result)
 ```
 
 or 
@@ -96,7 +96,7 @@ detector.run(
 
 ...
 
-print(detector.results)
+print(detector.result)
 ```
 
 
