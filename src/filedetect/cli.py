@@ -18,7 +18,7 @@ def parse_args() -> Namespace:
     from .Formats import Formats
     from .__about__ import __version__
 
-    formats_ = [f"- {file_type.name}\n\t- {file_type.value}\n" for file_type in Formats]
+    formats_ = [f"- {format.name}\n\t- {format.value}\n" for format in Formats]
     formats_ = "\n".join(formats_)
     formats_ = f"""Available file types: \n{formats_}"""
 
@@ -84,10 +84,10 @@ def parse_args() -> Namespace:
     else:
         args.only_stems = None
 
-    if args.file_type:
-        args.file_type = args.file_type.lower()
-        if args.file_type in {"", "all"}:
-            args.file_type = None
+    if args.format:
+        args.format = args.format.lower()
+        if args.format in {"", "all"}:
+            args.format = None
 
     return args
 
@@ -98,7 +98,7 @@ def main() -> None:
     print(
 f"""\
 Found {len(finder)} files matching the criteria in {args.path}:
-File type: {args.file_type}
+File type: {args.format}
 Deepness: {args.deep}
 Only stems: {args.only_stems}
 Files:
