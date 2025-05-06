@@ -9,7 +9,7 @@ from .FileDetect import FileDetect
 def run(args: Namespace) -> FileDetect:
     return FileDetect.find(
         path=args.path,
-        format=args.file_type,
+        format=args.format,
         deep=args.deep,
         only_stems=args.only_stems,
     )
@@ -49,7 +49,7 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "--suffixes",
         type=str,
-        help="File suffixes to search for (e.g., .mp4, .jpg) if file_type is not specified.",
+        help="File suffixes to search for (e.g., .mp4, .jpg) if format is not specified.",
     )
     parser.add_argument(
         "--list_formats",
