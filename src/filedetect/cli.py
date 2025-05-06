@@ -31,7 +31,7 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "--format",
         type=str,
-        default="",
+        default=None,
         help="Format to search for.",
         choices=[f.name for f in Formats] + ["all", ""],
     )
